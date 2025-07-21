@@ -111,10 +111,9 @@
         </div>
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <p class="large white-text">I am a third-year student at Michigan State University studying Geographic Information Science with minors 
-                    in Social Science Data Analytics and Global Public Health and Epidemiology. I am passionate about helping those who need it most, 
-                    espcially communities that are most at risk for public health crises. I enjoy solving spatial problems using GIS and Data Analysis tools.
-                     I am a quick and eager learner and am open to all opportunities that come my way.</p>
+                <p class="large white-text">I am a third-year student at Michigan State University majoring in Geographic Information Science with minors 
+                    in Social Science Quantitative Data Analytics and Global Public Health and Epidemiology. I am passionate about using spatial applications to solve problems and help communities in need 
+                    especially in regards to public health. I am a quick and eager learner and am open to all opportunities that come my way.</p>
             </div>
         </div>
     </div>
@@ -171,7 +170,8 @@
                         <h5 class="section-subheading text-muted">Analytical</h5>
                         <h5 class="section-subheading text-muted">Problem Solving</h5>
                         <h5 class="section-subheading text-muted">Willingness to Learn</h5>
-                        <h5 class="section-subheading text-muted">Interpersonal Communication</h5</p>
+                        <h5 class="section-subheading text-muted">Attention to Detail</h5>
+                        <h5 class="section-subheading text-muted">Interpersonal Communication</h5/p>
                 </div>
                 <div class="col-md-3">
                     <span class="fa-stack fa-4x">
@@ -346,7 +346,7 @@
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h3 class="subheading">Geographic Information Science (B.S.)</h3>
-                                <h4 class="subheading">Social Science Data Analytics Minor</h4>
+                                <h4 class="subheading">Social Science Quantitative Data Analytics Minor</h4>
                                 <h4 class="subheading">Global Public Health and Epidemiology Minor</h4>
                                 <h4 class="subheading">Michigan State University</h4>
                                 <h4 class="subheading">Honors College</h4>
@@ -481,7 +481,7 @@
     <!-- Port Modal 1A-->
     <div class="portfolio-modal modal fade" id="portfolioModal1A" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
+           <div class="close-modal" onclick="closeAndReturn(portfolioModal1A)">
                 <div class="lr">
                     <div class="rl">
                     </div>
@@ -494,17 +494,24 @@
                             <h2>Libraries and Public School Performance in Chicago</h2>
                             <h6><p class="item-intro text-muted">A group project investigating the correlation between school performance and proximity to public libraries in Chicago</p></h6>
                             <img class="img-responsive img-centered" src="img/portfolio/WebMapImg.png" alt="">
-                            <div class="custom-heading">This project was done for GEO 425 at Michigan State University. I gathered data on the locations of public libraries and
-                                public high schools in Chicago, along with performance attributes on how many students graduated from each school and different test scores. I also gathered road data in Chicago. 
-                                In ArcGIS Pro, I cleaned the road data to only show traversable roads and calculated how long it would take to drive on each road using the speed limit 
-                                and length attributes. I performed network analysis by assigning each public library as a facility and finding each library's service areas that were within
-                                 2 minute and five minute drives. The data was reformatted into GeoJSON files and imported in kepler.gl where each school was symbolized based on its four-year graduation 
-                                 rate. Schools that fell inside library service areas tended to have higher graduation rates, although there are some outliers and when charted, the relationship 
-                                 between distance to libraries and graduation rate is only slghtly negatively correlated. Further data would be needed such as school and library funding to 
-                                 determine if distance is really a factor in school performance or if other attributes like wealth affect performance more.</div>
+                            <div class="custom-heading">This project was completed for GEO 425 at Michigan State University. 
+                                I analyzed the relationship between public high school performance and proximity to public libraries 
+                                in Chicago. Using data on the locations of libraries, public high schools, and road networks, I also 
+                                incorporated school performance metrics such as four-year graduation rates and standardized test scores. 
+                                In ArcGIS Pro, I refined the road network to include only drivable roads and calculated travel times 
+                                using speed limit and road length attributes. I then performed a network analysis by designating each 
+                                public library as a facility and mapping out 2- and 5-minute service areas around them. The resulting 
+                                spatial data was converted to GeoJSON and visualized in kepler.gl, with high schools symbolized by 
+                                graduation rates. Preliminary findings suggest that schools located within library service areas 
+                                generally exhibit higher graduation rates. However, there are exceptions, and statistical 
+                                analysis showed only a slight negative correlation between distance to libraries and school performance. 
+                                Additional data such as funding levels for schools and libraries or 
+                                socioeconomic demographics are needed along with further analysis to determine if the correlation is causal.
+                                </div>
                             <button type="button" class="btn btn-primary" onclick="window.open('https://kepler.gl/demo/map?mapUrl=https://dl.dropboxusercontent.com/scl/fi/mhn4730zue6eccuzc89sk/keplergl_im40u0a.json?rlkey=49i6iomlciuyfvbu479klo2eb&dl=0', '_blank')">
   <i></i> Open Project
 </button>
+
                         </div>
                     </div>
                 </div>
@@ -517,7 +524,7 @@
     <!-- Port Modal 1B-->
     <div class="portfolio-modal modal fade" id="portfolioModal1B" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
+                       <div class="close-modal" onclick="closeAndReturn(portfolioModal1B)">
                 <div class="lr">
                     <div class="rl">
                     </div>
@@ -530,12 +537,12 @@
                             <h2>Hospital Distribution in Michigan</h2>
                             <h6><p class="item-intro text-muted">A research report investigating hospital distribution, financial stability, and health outcomes in Michigan Counties</p></h6>
                             <img class="img-responsive img-centered" src="img/portfolio/HopsitalsTitle.png" alt="">
-                            <div class="custom-heading"> This project was done as an honors opportunity for GEO 425 at Michigan State University. I chose to use GIS to look into public 
-                                health data of Michigan's counties to identify areas that were lacking in healthcare and find correlations between access to hospitals and the 
+                            <div class="custom-heading"> This project was done as an honors opportunity for GEO 425 at Michigan State University. I utilized GIS to look into public 
+                                health data of Michigan's counties to identify areas that were lacking in healthcare and had worse health outcomes. I investigated any correlations between access to hospitals and the 
                                 life expectancy and number of hospital visits in each county. I also dived deeper into the financial status of each county by the percentage of 
                                 people in poverty and the average household income. I used Hot Spot Analysis (Getis-Ord Gi*) in ArcGIS Pro to identify counties that had lower 
                                 life expectancies or more citizens in poverty.  My findings indicated wealthier counties had more hopsitals within them, but that population 
-                                density played a bigger role in health outcomes than just proximity to a medical facility.</div>
+                                density played a bigger role in health outcomes than just proximity to medical facilities.</div>
 <button type="button" class="btn btn-primary" onclick="window.open('HospitalsReport.pdf')">
   <i></i> Open Project
 </button>
@@ -550,7 +557,7 @@
     <!-- Port Modal 1C-->
     <div class="portfolio-modal modal fade" id="portfolioModal1C" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
+                       <div class="close-modal" onclick="closeAndReturn(portfolioModal1C)">
                 <div class="lr">
                     <div class="rl">
                     </div>
@@ -579,7 +586,7 @@
     <!-- Port Modal 1D-->
     <div class="portfolio-modal modal fade" id="portfolioModal1D" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
+                       <div class="close-modal" onclick="closeAndReturn(portfolioModal1D)">
                 <div class="lr">
                     <div class="rl">
                     </div>
@@ -667,7 +674,7 @@
     <!-- Port Modal 2A-->
         <div class="portfolio-modal modal fade" id="portfolioModal2A" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
+                    <div class="close-modal" onclick="closeAndReturn(portfolioModal2A)">
                     <div class="lr">
                         <div class="rl">
                         </div>
@@ -699,7 +706,7 @@
         <!-- Port Modal 2B-->
         <div class="portfolio-modal modal fade" id="portfolioModal2B" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
+                    <div class="close-modal" onclick="closeAndReturn(portfolioModal2B)">
                     <div class="lr">
                         <div class="rl">
                         </div>
@@ -729,7 +736,7 @@
         <!-- Port Modal 2C-->
         <div class="portfolio-modal modal fade" id="portfolioModal2C" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
+                <div class="close-modal" onclick="closeAndReturn(portfolioModal2C)">
                     <div class="lr">
                         <div class="rl">
                         </div>
@@ -750,6 +757,13 @@
                                 <button type="button" class="btn btn-primary" onclick="window.open('https://github.com/arielooms/Political-Ideology/blob/main/PLSHonorsProject.pdf')">
   <i></i> Open Project
 </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
                             </div>
                         </div>
                     </div>
@@ -795,7 +809,7 @@
     <!-- Port Modal 3A-->
         <div class="portfolio-modal modal fade" id="portfolioModal3A" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
+                <div class="close-modal" onclick="closeAndReturn(portfolioModal3A)">
                     <div class="lr">
                         <div class="rl">
                         </div>

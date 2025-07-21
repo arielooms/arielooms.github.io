@@ -1,26 +1,23 @@
-/*!
- * Start Bootstrap - Agnecy Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
+function closeAndReturn(element) {
+    var $currentModal = $(element).closest('.modal');
+    var currentModalId = $currentModal.attr('id');
+    var parentModalId = currentModalId.replace(/([A-Z]+)$/, '');
 
-// jQuery for page scrolling feature - requires jQuery Easing plugin
-$(function() {
-    $('a.page-scroll').bind('click', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
+    // Hide the current nested modal
+    $currentModal.modal('hide');
+
+    // When hidden, show parent modal and fix scroll behavior
+    $currentModal.on('hidden.bs.modal', function () {
+        // Show parent modal
+        $('#' + parentModalId).modal('show');
+
+        // Ensure body has modal-open class to prevent main page scroll
+        $('body').addClass('modal-open');
+
+        // Reset scroll inside modal content area to top
+        $('#' + parentModalId).find('.modal-content').scrollTop(0);
+
+        // Remove this event handler to avoid duplicates
+        $(this).off('hidden.bs.modal');
     });
-});
-
-// Highlight the top nav as scrolling occurs
-$('body').scrollspy({
-    target: '.navbar-fixed-top'
-})
-
-// Closes the Responsive Menu on Menu Item Click
-$('.navbar-collapse ul li a').click(function() {
-    $('.navbar-toggle:visible').click();
-});
+}

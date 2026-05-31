@@ -140,12 +140,60 @@
                     <p class="text-muted">
                         <h5 class="section-subheading text-muted">Google Suite</h5>
                         <h5 class="section-subheading text-muted">Microsoft Office</h5>
-                        <h5 class="section-subheading text-muted">Python</h5>
-                        <h5 class="section-subheading text-muted">R</h5>
+                        <details id="pydetails">
+                            <summary id="pysummaryText"><h5 class="section-subheading text-muted">▶ Python</h5></summary>
+                            <p><h6>numpy</h6></p>
+                            <p><h6>pandas</h6></p>
+                            <p><h6>geopandas</h6></p>
+                            <p><h6>rasterio</h6></p>
+                            <p><h6>matplotlib</h6></p>
+                            <p><h6>sklearn</h6></p>
+                            <p><h6>scipy</h6></p>
+                            <p><h6>pdal</h6></p>
+                            <p><h6>gdal</h6></p>
+                        </details>
+                        <details id="Rdetails">
+                            <summary id="RsummaryText"><h5 class="section-subheading text-muted">▶ R</h5></summary>
+                            <p><h6>RStudio</h6></p>
+                            <p><h6>ggplot2</h6></p>
+                            <p><h6>terra</h6></p>
+                            <p><h6>tidyr</h6></p>
+                            <p><h6>tidyverse</h6></p>
+                        </details>
                         <h5 class="section-subheading text-muted">SQL</h5>
                         <h5 class="section-subheading text-muted">ENCO Automation</h5>
                     </p>
                 </div>
+
+
+<script>
+  const pydetails = document.getElementById('pydetails');
+  const pysummary = document.getElementById('pysummaryText');
+
+  // Listen for the toggle event (opens or closes)
+  pydetails.addEventListener('toggle', () => {
+    if (pydetails.open) {
+      pysummary.innerHTML = "<h5 class='section-subheading text-muted'>▼ Python</h5>";
+    } else {
+      pysummary.innerHTML = "<h5 class='section-subheading text-muted'>▶ Python</h5>";
+    }
+  });
+</script>
+
+
+<script>
+  const Rdetails = document.getElementById('Rdetails');
+  const Rsummary = document.getElementById('RsummaryText');
+
+  // Listen for the toggle event (opens or closes)
+  Rdetails.addEventListener('toggle', () => {
+    if (Rdetails.open) {
+      Rsummary.innerHTML = "<h5 class='section-subheading text-muted'>▼ R</h5>";
+    } else {
+      Rsummary.innerHTML = "<h5 class='section-subheading text-muted'>▶ R</h5>";
+    }
+  });
+</script>
                 <div class="col-md-3">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
@@ -228,7 +276,7 @@
                             <div class="portfolio-hover-content">
                             </div>
                         </div>
-                        <img src="img/portfolio/grapesposterimg.png" class="img-responsive" alt="">
+                        <img src="img/portfolio/SugarBeetPoster.png" class="img-responsive" alt="">
                     </a>
                     <div class="portfolio-caption">
                         <h4>Research Projects</h4>
@@ -503,6 +551,7 @@
                     </a>
                     <div class="portfolio-caption">
                         <h4>COVID-19 Modeling in the United States</h4>
+                        <h6>Python, Choropleth Maps, GIS</h6>
                         <p class="text-muted">December 2025</p>
                     </div>
                 </div>
@@ -517,6 +566,7 @@
                     </a>
                     <div class="portfolio-caption">
                         <h4>Mapping the 1968 Baltimore Riots</h4>
+                        <h6>ArcGIS Pro, Georeferencing, Geocoding, Maps</h6>
                         <p class="text-muted">November 2025</p>
                     </div>
                 </div>
@@ -533,6 +583,7 @@
                     </a>
                     <div class="portfolio-caption">
                         <h4>Crime Prevention Outreach in Flint</h4>
+                        <h6>Geocoding, Maps, Surveys, Overlay</h6>
                         <p class="text-muted">June 2025</p>
                     </div>
                 </div>
@@ -549,6 +600,7 @@
                     </a>
                     <div class="portfolio-caption">
                         <h4>Libraries in Chicago</h4>
+                        <h6>Network Analysis, ArcGIS Pro, Maps, GIS, kepler.gl</h6>
                         <p class="text-muted">April 2025</p>
                     </div>
                 </div>
@@ -565,10 +617,12 @@
                     </a>
                     <div class="portfolio-caption">
                         <h4>Hospital Distribution in Michigan</h4>
+                        <h6>ArcGIS Pro, Multivariate Maps, GIS, Hotspot Analysis</h6>
                         <p class="text-muted">March 2025</p>
                     </div>
                 </div>
 
+                <!-- 
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal1C" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
@@ -585,7 +639,9 @@
 
                 <div class="clearfix visible-md-block visible-lg-block"></div>
                 <div class="clearfix visible-sm-block"></div> 
+            -->
 
+                <!-- 
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal1D" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
@@ -599,7 +655,9 @@
                         <p class="text-muted">February 2025</p>
                     </div>
                 </div>
+            -->
 
+                <!-- 
                 <div class="col-md-4 col-sm-6 portfolio-item">
                     <a href="#portfolioModal1F" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
@@ -619,6 +677,7 @@
         </div>
     </div>
 </div>
+-->
 
 
 
@@ -686,7 +745,7 @@
                         <div class="modal-body">
                             <h2>Hospital Distribution in Michigan</h2>
                             <h6><p class="item-intro text-muted">A research report investigating hospital distribution, financial stability, and health outcomes in Michigan Counties</p></h6>
-                            <img class="img-responsive img-centered" src="img/portfolio/HopsitalsTitle.png" alt="">
+                            <img class="img-responsive " src="img/portfolio/HopsitalsTitle.png" alt="">
                             <p><br> </p>
                             <div class="custom-heading"> This project was done as an honors opportunity for GEO 425: Problems in Geographic Information Science at Michigan State University. I utilized GIS to look into public 
                                 health data of Michigan's counties to identify areas that were lacking in healthcare and had worse health outcomes. I investigated any correlations between access to hospitals and the 
@@ -872,6 +931,12 @@
             </div>
         </div>
     </div>
+    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
     
 
@@ -894,7 +959,8 @@
                             <img src="img/portfolio/StatsHonorsPic1.png" class="img-responsive" alt="Round Icons">
                         </a>
                         <div class="portfolio-caption">
-                            <h4>Stats honors</h4>
+                            <h4>Worldwide Schooling</h4>
+                            <h6>R, RStudio, rnaturalearth </h6>
                             <p class="text-muted">December 2025</p>
                         </div>
                     </div>
@@ -909,6 +975,7 @@
                         </a>
                         <div class="portfolio-caption">
                             <h4>Animals in the Shelter</h4>
+                            <h6>Python, pandas, numpy, Jupyter Notebooks, Data Analysis </h6>
                             <p class="text-muted">December 2024</p>
                         </div>
                     </div>
@@ -923,10 +990,13 @@
                         </a>
                         <div class="portfolio-caption">
                             <h4>COVID-19 Vaccine Distribution</h4>
+                            <h6>Python, pandas, numpy, Jupyter Notebooks, Data Analysis</h6>
                             <p class="text-muted">December 2024</p>
                         </div>
-                    </div>
+                    </div>  
 
+                </div>
+                <div class="row">
                     <div class="col-md-4 col-sm-6 portfolio-item">
                         <a href="#portfolioModal2C" class="portfolio-link" data-toggle="modal">
                             <div class="portfolio-hover">
@@ -937,10 +1007,9 @@
                         </a>
                         <div class="portfolio-caption">
                             <h4>Factors Influencing Political Affiliation</h4>
+                            <h6>R, RStudio, Data Analysis, ggplot2, dplyr, sf</h6>
                             <p class="text-muted">April 2025</p>
                         </div>
-                    </div>
-
                     </div>
                 </div>
             </div>
@@ -963,7 +1032,7 @@
                             <div class="modal-body">
                                 <h1>Animals in the Shelter</h1>
                                 <h6><p class="item-intro text-muted">A data analysis project investigating the frequency of dogs in several shelters across the United States based on age, breed, and reason for intake</p></h6>
-                                <img class="img-responsive img-centered" src="img/portfolio/DogAnalysis.png" alt="">
+                                <img class="img-responsive" src="img/portfolio/DogAnalysis.png" alt="">
                                 <p><br> </p>
                                 <div class="custom-heading"> This analyis project was done for CMSE 201: Introduction to Computational Modeling at Michigan State University. The project utilized Python via Jupyter Notebook 
                                     to gather and clean data, and perform analyses to answer my research question. I obtained data from two different animal shelters, one in Austin,
@@ -1098,20 +1167,35 @@
                 <div class="row">
 
                     <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#portfolioModal3C" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                </div>
+                            </div>
+                            <img src="img/portfolio/droneImg.png" class="img-responsive" alt="Round Icons">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Remote Sensing Approaches for Pre-Harvest Detection of Root Disease in Sugar Beets</h4>
+                            <h6>R, RStudio, ArcGIS Pro, Multispectral Drone Imagery, Hyperspectral Drone Imagery, Vegetation Indices, terra, sf </h6>
+                            <p class="text-muted">April 2026</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
                         <a href="#portfolioModal3B" class="portfolio-link" data-toggle="modal">
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content">
                                 </div>
                             </div>
-                            <img src="img/portfolio/VivPoster.png" class="img-responsive" alt="Round Icons">
+                            <img src="img/portfolio/NEXTimg.png" class="img-responsive" alt="Round Icons">
                         </a>
                         <div class="portfolio-caption">
                             <h4>Cross-Sectional Associations Between Food Addiction and Cardiometabolic Biomarkers in Young Adults</h4>
+                            <h6>Statistical Analysis, Food Insecurity, Food Addiction </h6>
                             <p class="text-muted">July 2025</p>
                         </div>
                     </div>
 
-                                        <div class="col-md-4 col-sm-6 portfolio-item">
+                    <div class="col-md-4 col-sm-6 portfolio-item">
                         <a href="#portfolioModal3A" class="portfolio-link" data-toggle="modal">
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content">
@@ -1121,9 +1205,11 @@
                         </a>
                         <div class="portfolio-caption">
                             <h4>Grape Cluster Yield using LiDAR</h4>
+                            <h6>LiDAR, point clouds, Cloud Compare, Pix4D, Multispectral Drone Imagery, Object Detection, Classification</h6>
                             <p class="text-muted">December 2024</p>
                         </div>
                     </div>
+
 
 
 
@@ -1143,7 +1229,7 @@
                             <div class="modal-body">
                                 <h2>Grape Cluster Yield using LiDAR</h2>
                                 <h6><p class="item-intro text-muted">A group project investigating if drones or handheld LiDAR systems are better at object identification</p></h6>
-                                <img class="img-responsive img-centered" src="img/portfolio/grapesposterimg.png" alt="">
+                                <img class="img-responsive" src="img/portfolio/grapesposterimg.png" alt="">
                                 <p><br> </p>
                                 <div class="custom-heading">This project was completed collaboratively for GEO 829: Collection and Analysis of Drone Imagery at Michigan State University. My group and I investigated
                                      the research question are grape clusters better counted by Unoccupied Aerial Vehicles (UAVs) or by handheld Light Detection and 
@@ -1152,7 +1238,7 @@
                                       also put through an unsupervised classification model. The UAV data also went through a deep learning model to identify objects/grape
                                        clusters. The results were preliminary and would require further investigation but LiDAR was better in this first stage of research.</div>
                                        <p><br> </p>
-                                <button type="button" class="btn btn-primary" onclick="window.open('links/GrapesPostercopy.pdf')">
+<button type="button" class="btn btn-primary" onclick="window.open('img/portfolio/grapesposterimg.png')">
   <i></i> Open Project
 </button>
                             </div>
@@ -1184,6 +1270,39 @@
 Health Study. The goals of the project were to investigate associations between food addiction symptoms and cardiometabolic biomarkers. Findings indicated that the associations could be attributed to changes in body mass index (BMI) and once BMI was accounted for, the associations were very small and insignificant. I presented this poster at the 2025 Mid-Michigan Symposium for Undergraduate Research Experiences (MidSURE).</div>
 <p><br> </p>
                                 <button type="button" class="btn btn-primary" onclick="window.open('Links/FoodAddictionPoster.pdf')">
+  <i></i> Open Project
+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- Port Modal 3C-->
+        <div class="portfolio-modal modal fade" id="portfolioModal3C" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" onclick="closeAndReturn(portfolioModal3C)">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <h2>Remote Sensing Approaches for Pre-Harvest Detection of Root Disease in Sugar Beets</h2>
+                                <h6><p class="item-intro text-muted">A research project conducted with Dr. Erin Bunting, Dr. Rachel Naegele, and Dr. Linda Hanson, funded by the United States Department of Agriculture</p></h6>
+                                <img class="img-responsive" src="img/portfolio/SugarPoster.png" alt="">
+                                <p><br> </p>
+                                <div class="custom-heading">This was a project funded by the United States Department of Agriculture and conducted under Michigan State University's Department of Geography, Environment, and Spatial Sciences and the Department of Plant, Soil and Microbial Sciences. The goal of the project was to utilize multispectral and hyperspectral imagery collected of sugar beet fields to identify healthy and diseased plots before harvest. In the past, few methodologies have been identified that can successfully pinpoint diseased plots with enough time to prevent root disease from infecting nearby plants.
+                                    We were able to identify several vegetation indices that found significant differences in healthy and diseased plants early in the growing season. These indices included the Modified Photochemical Reflectance Index (MPRI) and the Green Leaf Index (GLI). A random forest model was utilized to confirm the indices were significant and at which dates imagery was collected were important in identifying differences. Field imagery was loaded, cleaned, and visualized in ArcGIS Pro following preprocessing procedures. Reflectance and band value extraction, random forest, and graphs were produced and analyzed in R. 
+                                    Our results are from the drone imagery collected in 2024. The next steps are to analyze the additional years of imagery we have collected to determine if spatiotemporal trends are consistent. I presented results from 2024 at the 2026 Michigan State University Undergraduate Research and Arts Forum (UURAF) and earned a first place award in the Agriculture and Animal Science category. At UURAF, I had the opportunity to share my results and the impact they could have on the research and sugar beet farming community.
+                                </div>
+<p><br> </p>
+                                <button type="button" class="btn btn-primary" onclick="window.open('img/portfolio/SugarPoster.png')">
   <i></i> Open Project
 </button>
                             </div>
